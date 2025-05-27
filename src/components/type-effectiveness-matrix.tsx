@@ -86,7 +86,7 @@ export default function TypeEffectivenessMatrix({ types }: TypeEffectivenessMatr
 
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12}>
+      <Grid>
         <Paper sx={{ p: 3 }}>
           <Typography variant="h5" gutterBottom fontWeight="bold">
             ⚔️ Type Effectiveness Matrix

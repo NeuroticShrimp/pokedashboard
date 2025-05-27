@@ -68,7 +68,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
   return (
     <Grid container spacing={3}>
       {/* Type Distribution */}
-      <Grid item xs={12} md={6}>
+      <Grid>
         <Paper sx={{ p: 3, height: 400 }}>
           <Typography variant="h6" gutterBottom fontWeight="bold">
             Type Distribution
@@ -91,7 +91,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
       </Grid>
 
       {/* Type Combinations */}
-      <Grid item xs={12} md={6}>
+      <Grid>
         <Paper sx={{ p: 3, height: 400 }}>
           <Typography variant="h6" gutterBottom fontWeight="bold">
             Popular Type Combinations
@@ -119,13 +119,13 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
       </Grid>
 
       {/* Type Effectiveness Rankings */}
-      <Grid item xs={12}>
+      <Grid>
         <Paper sx={{ p: 3 }}>
           <Typography variant="h6" gutterBottom fontWeight="bold">
             Type Effectiveness Analysis
           </Typography>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+            <Grid>
               <Typography variant="subtitle1" gutterBottom fontWeight="medium">
                 🗡️ Best Offensive Types
               </Typography>
@@ -141,7 +141,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
                 ))}
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid>
               <Typography variant="subtitle1" gutterBottom fontWeight="medium">
                 🛡️ Most Vulnerable Types
               </Typography>
@@ -170,13 +170,13 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
       </Grid>
 
       {/* Summary Stats */}
-      <Grid item xs={12}>
+      <Grid>
         <Paper sx={{ p: 3 }}>
           <Typography variant="h6" gutterBottom fontWeight="bold">
             📈 Summary Statistics
           </Typography>
           <Grid container spacing={3}>
-            <Grid item xs={6} md={3}>
+            <Grid>
               <Box textAlign="center">
                 <Typography variant="h4" color="primary" fontWeight="bold">
                   {pokemon.length}
@@ -186,7 +186,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={6} md={3}>
+            <Grid>
               <Box textAlign="center">
                 <Typography variant="h4" color="secondary" fontWeight="bold">
                   {types.length}
@@ -196,7 +196,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={6} md={3}>
+            <Grid>
               <Box textAlign="center">
                 <Typography variant="h4" color="success.main" fontWeight="bold">
                   {typeStats.comboData.length}
@@ -206,7 +206,7 @@ export default function TypeAnalytics({ pokemon, types }: TypeAnalyticsProps) {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={6} md={3}>
+            <Grid>
               <Box textAlign="center">
                 <Typography variant="h4" color="warning.main" fontWeight="bold">
                   {Math.round(pokemon.reduce((sum, p) => sum + p.baseExperience, 0) / pokemon.length)}
